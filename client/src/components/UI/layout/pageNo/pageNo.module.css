@@ -1,0 +1,22 @@
+.page > input {
+  width: 3vw;
+  margin-left: 1vw;
+}
+
+.page {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  bottom: 2vh;
+}
+
+@media (max-width: 424px) {
+  .page {
+    bottom: 0.75vh;
+  }
+  .page > input {
+    width: 10vw;
+    margin-left: 1vw;
+  }
+}

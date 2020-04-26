@@ -1,0 +1,9 @@
+node_modules/
+client/node_modules/
+Server/node_modules/
+Server/*.env
+client/*.prettierrc
+Server/*.prettierrc
+client/*eslint.json
+Server/*eslint.json
+.vscode

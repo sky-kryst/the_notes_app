@@ -1,0 +1,47 @@
+.toggleButton {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 27px;
+  width: 47px;
+  padding: 4px 0px;
+  padding-left: 0.4vw;
+  background-color: inherit;
+  cursor: pointer;
+  align-items: center;
+}
+.toggleButton div {
+  width: 80%;
+  height: 11%;
+  background-color: lightgray;
+  border-radius: 20%;
+}
+
+.toggleButton:hover {
+  position: relative;
+  bottom: 1px;
+  right: 4px;
+  /* height: 29px; */
+  /* width: 50px; */
+}
+
+@media (max-width: 424px) /*, (max-height: 736px) */ {
+  .toggleButton {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    height: 3vh;
+    width: 6vw;
+    margin: 0.3vh 0;
+    margin-left: 4vw;
+    background-color: inherit;
+    cursor: pointer;
+    align-items: center;
+  }
+  .toggleButton div {
+    width: 6vw;
+    height: 0.3vh;
+    background-color: lightgray;
+    border-radius: 20%;
+  }
+}

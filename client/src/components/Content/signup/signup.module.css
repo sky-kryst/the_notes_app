@@ -1,0 +1,58 @@
+.Signup {
+  width: 21vw;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.Signup > .msg {
+  text-align: center;
+  font-weight: 500;
+  font-style: italic;
+  margin: 1vh 0 0 0;
+  color: red;
+  background-color: pink;
+  border-radius: 4px;
+  padding-bottom: 0.3vh;
+  border: 1px solid lightcoral;
+}
+
+.Signup > form {
+  margin-top: 1vh;
+  height: inherit;
+}
+
+.form > .el {
+  padding: 0.5vh 0;
+}
+
+.form .button {
+  margin: 2vh auto;
+  display: flex;
+  justify-content: center;
+}
+
+.form input {
+  width: 100%;
+}
+
+.text {
+  margin: 0.5vh 0.2vw;
+}
+
+.refs {
+  margin-left: 2vw;
+}
+
+@media (max-width: 424px) {
+  .Signup {
+    width: 80%;
+    height: 77vh;
+  }
+  .form input {
+    width: 100%;
+    height: 5vh;
+  }
+  .msg {
+    font-size: 80%;
+  }
+}

@@ -1,0 +1,71 @@
+.link {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.red {
+  border-radius: 50%;
+  font-size: 70%;
+  color: white;
+  background-color: red;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 26vw;
+  top: 2.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link nav {
+  float: none;
+  color: grey;
+  padding: 1vh 1vw;
+  text-decoration: none;
+  text-align: left;
+}
+
+.anchor {
+  background: inherit;
+  margin: 0px 10px;
+  color: black;
+  display: inline;
+}
+
+.anchor:hover {
+  position: relative;
+  bottom: 0.3vh;
+  right: 0.2vw;
+}
+
+@media (max-width: 424px) {
+  .link {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    margin: auto 0;
+  }
+  .red {
+    position: absolute;
+    top: 0.1vh;
+    right: 10.7vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.1vh;
+    width: 13px;
+    height: 13px;
+    font-size: 65%;
+  }
+  .anchor {
+    background: inherit;
+    color: black;
+    text-align: center;
+    font-size: 70%;
+  }
+  .anchor:hover {
+    position: static;
+    color: grey;
+  }
+}

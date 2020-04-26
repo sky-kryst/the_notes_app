@@ -1,0 +1,37 @@
+.layout {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content {
+  display: inline-flex;
+  flex-direction: column;
+  height: /* 80% */ 83%;
+  width: 63%;
+  margin: 0px auto;
+  padding-top: 3px;
+  border-radius: 11px;
+  box-shadow: 5px 2px 8px 2px lightgrey;
+  margin-top: 27px;
+}
+
+@media (max-width: 424px) {
+  .content {
+    justify-content: inherit;
+    align-content: space-around;
+    /* height: 98.5%; */
+    height: 80vh;
+    width: 79vw;
+    margin: 0px auto;
+    position: relative;
+    /* top: 8vh; */
+    /* top: 7.95%; */
+    top: 8.3%;
+    padding-bottom: 1vh;
+  }
+  a {
+    text-decoration: none;
+  }
+}

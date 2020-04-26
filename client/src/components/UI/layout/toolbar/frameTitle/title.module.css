@@ -1,0 +1,17 @@
+.text {
+  cursor: default;
+  position: absolute;
+  left: 43.9vw;
+  top: 3vh;
+  background-color: inherit;
+  border: 0px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+@media (max-width: 424px) {
+  .text {
+    top: 1.3vh;
+    left: 32vw;
+  }
+}

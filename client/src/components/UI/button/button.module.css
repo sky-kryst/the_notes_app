@@ -1,0 +1,26 @@
+.Button {
+  box-sizing: border-box;
+  width: 9.5vw;
+  height: 6.5vh;
+  border: 1px solid darkgray;
+  border-radius: 3.25vh;
+  padding: 2px 4px;
+}
+
+@media (max-width: 424px) /*, (max-height: 736px) */ {
+  .Button {
+    box-sizing: border-box;
+    width: 20vw;
+    height: 5vh;
+    border: 1px solid darkgray;
+    border-radius: 3.25vh;
+    padding: 0.1vh 1vw;
+    text-size-adjust: 90%;
+  }
+}
+
+/* @media (max-width: 321px) {
+  .Button {
+    padding: 0.5vh 1vw;
+  }
+} */

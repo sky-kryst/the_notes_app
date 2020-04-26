@@ -1,0 +1,43 @@
+.dock {
+  height: 50%;
+  width: 18vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto 0px;
+  position: absolute;
+  top: 7%;
+  right: 0;
+  z-index: 100;
+  padding-top: 90px;
+}
+
+.dock button {
+  box-shadow: 10px 6px 6px 4px #d7d7d7;
+}
+
+.dock button:hover {
+  border-radius: 3.5vh;
+  padding: 4px 6px;
+  position: relative;
+  right: 5px;
+  bottom: 3px;
+}
+
+@media (max-width: 424px) /*, (max-height: 736px) */ {
+  .dock {
+    height: 3vh;
+    width: 94%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    /* top: 2.72%; */
+    top: 2.8%;
+    z-index: 100;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+}

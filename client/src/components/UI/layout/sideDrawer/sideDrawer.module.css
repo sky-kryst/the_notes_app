@@ -1,0 +1,75 @@
+.close {
+  display: none;
+  transform: translateX(-100%);
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  height: inherit;
+  width: 17.5vw;
+  position: absolute;
+  left: 0;
+  z-index: 200;
+  transition: transform 0.3s ease-out;
+  transform: translateX(0);
+  box-shadow: 1px #494949;
+  border-radius: 0px 17px 17px 0px;
+  box-shadow: 5px 0px 15px 3px grey;
+}
+
+.open header {
+  width: 100%;
+  height: 5.4vh;
+  padding-top: 3vh;
+  text-align: center;
+  border-bottom: 3px solid lightgray;
+  border-radius: 10px;
+  padding-bottom: 1vh;
+  align-items: center;
+}
+
+.open div {
+  box-sizing: border-box;
+  width: inherit;
+  height: 7.5vh;
+  margin-top: 2.4vh;
+  padding-bottom: 0.6vh;
+}
+
+.open a {
+  background-color: inherit;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  padding-bottom: 3vh;
+}
+
+.open div :hover,
+.open header :hover {
+  border-bottom: 3px solid lightgray;
+  border-radius: 10px;
+}
+
+@media (max-width: 424px) {
+  .open {
+    align-content: stretch;
+    height: 100%;
+    width: 65%;
+    font-size: 95%;
+    box-shadow: 5px 0px 15px 3px lightgrey;
+  }
+  .open div,
+  .open header {
+    box-shadow: 3px 5px 4px 3px lightgrey;
+    margin: 0;
+    padding: 3vh 0 1.2vh 0;
+  }
+  .open div {
+    border-radius: 0 0 10px 10px;
+    padding: 4vh 0 6.3vh 0;
+  }
+}

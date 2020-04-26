@@ -1,0 +1,27 @@
+.Modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  align-self: center;
+  z-index: 500;
+  background-color: white;
+  border: 3px solid #c8ccc9;
+  box-shadow: 1px 1px 1px black;
+  padding: 3vh 3vw;
+  width: 40%;
+  height: 40%;
+  left: 30%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 450px) {
+  .Modal {
+    width: 80%;
+    height: 30%;
+    top: 35%;
+    left: 10%;
+  }
+}

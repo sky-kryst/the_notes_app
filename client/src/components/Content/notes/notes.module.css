@@ -1,0 +1,83 @@
+.notes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.notes span {
+  padding-left: 2vw;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+.created,
+.collaborated {
+  height: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: inherit;
+}
+
+.tiles {
+  height: 60%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 23.5%);
+  grid-auto-rows: 100%;
+  column-gap: 2%;
+  overflow-y: auto;
+  padding: 1vh 0;
+  grid-auto-flow: row;
+  margin: 0;
+}
+
+.tiles > div {
+  height: initial;
+  margin: 0.7vh 0;
+}
+
+.tiles > h4 {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  margin: auto;
+}
+
+.tiles .null {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 424px) {
+  .tiles {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 1% auto;
+    height: 70%;
+  }
+  .created,
+  .collaborated {
+    justify-content: center;
+    margin: 0;
+  }
+  .tiles > div {
+    height: 22vh;
+    margin-top: 3%;
+  }
+  .tiles > h4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: auto 0;
+    padding-left: 2%;
+  }
+  .notes span {
+    margin-bottom: 1vh;
+  }
+}
