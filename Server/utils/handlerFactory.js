@@ -126,17 +126,6 @@ exports.getAll = Model =>
         .paginate()
 
       doc = await features.query
-
-      /* doc = doc.map(el => {
-        let { title, body, _id, likesCount, creator, collaborator, request, consumer, likes } = el
-        body.length>55? body = `${body.slice(0, 55)}...`:null
-        if (title && title.length > 20) {
-          title=`${title.slice(0, 20)}...`
-        } else if (!title || typeof title === 'undefined') {
-          title= '...'
-        }
-        return {_id,title,body,likesCount, creator, collaborator, request, consumer, likes }
-      }) */
     } else {
       const features = new APIFeatures(Model.find(), req.query)
         .filter()

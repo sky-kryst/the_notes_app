@@ -128,10 +128,7 @@ class Login extends Component {
             <a href="/" onClick={this.signupHandler}>
               Signup
             </a>
-            <a
-              href="/"
-              onClick={this.forgotPasswordHandler} /*  className={css.refs} */
-            >
+            <a href="/" onClick={this.forgotPasswordHandler}>
               Forgot Password?
             </a>
           </div>

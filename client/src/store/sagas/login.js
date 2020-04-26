@@ -3,15 +3,11 @@ import axios from '../../axios'
 import * as actions from '../actions/index'
 
 export function* logoutSaga(action) {
-  try {
-    yield call([localStorage, 'removeItem'], 'token')
-    yield call([localStorage, 'removeItem'], 'expirationDate')
-    yield call([localStorage, 'removeItem'], 'userId')
-    yield put(actions.logoutSucceed())
-    yield axios.get('user/logout')
-  } catch (err) {
-    console.log(err)
-  }
+  yield call([localStorage, 'removeItem'], 'token')
+  yield call([localStorage, 'removeItem'], 'expirationDate')
+  yield call([localStorage, 'removeItem'], 'userId')
+  yield put(actions.logoutSucceed())
+  yield axios.get('user/logout')
 }
 
 export function* checkAuthTimeoutSaga(action) {

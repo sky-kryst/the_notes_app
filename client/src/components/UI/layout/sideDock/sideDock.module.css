@@ -25,7 +25,7 @@
   bottom: 3px;
 }
 
-@media (max-width: 424px) /*, (max-height: 736px) */ {
+@media (max-width: 424px) {
   .dock {
     height: 3vh;
     width: 94%;
@@ -34,7 +34,6 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    /* top: 2.72%; */
     top: 2.8%;
     z-index: 100;
     padding-top: 0;

@@ -12,7 +12,7 @@
   border-radius: 5px 5px 17px 17px;
 }
 
-@media (max-width: 424px) /*, (max-height: 736px) */ {
+@media (max-width: 424px) {
   .toolbar {
     display: flex;
     justify-content: space-between;

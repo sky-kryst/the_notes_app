@@ -21,11 +21,9 @@
   position: relative;
   bottom: 1px;
   right: 4px;
-  /* height: 29px; */
-  /* width: 50px; */
 }
 
-@media (max-width: 424px) /*, (max-height: 736px) */ {
+@media (max-width: 424px) {
   .toggleButton {
     display: flex;
     flex-flow: column;

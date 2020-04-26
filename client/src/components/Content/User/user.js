@@ -16,16 +16,7 @@ const User = props => {
   const [fetched, setFetched] = useState(false)
 
   useEffect(() => {
-    /* const getData = async () => {
-      try {
-        const res = await axios.get('user/me')
-        setUser(res.data.data)
-      } finally {
-        setFetched(true)
-      }
-    } */
     if (isAuthenticated) {
-      // getData()
       ;(async () => {
         try {
           const res = await axios.get('user/me')

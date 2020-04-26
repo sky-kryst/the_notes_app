@@ -58,8 +58,6 @@ const noteSchema = new mongoose.Schema(
   }
 )
 
-// Document Middleware
-
 noteSchema.pre(/^find/, function(next) {
   const options =
     '-__v -createdPosts -collaboratedPosts -consumedPosts -id -passwordChangedAt -photo'

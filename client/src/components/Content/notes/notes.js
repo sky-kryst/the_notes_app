@@ -49,25 +49,13 @@ const Notes = props => {
       if (created.length <= 4 * (1 * page - 1)) {
         op = <h4>Nothing to show here!</h4>
       } else {
-        op = (
-          <Tiles
-            data={created /* .slice(4 * (1 * page - 1), 4 * page) */}
-            TLength={10}
-            BLength={40}
-          />
-        )
+        op = <Tiles data={created} TLength={10} BLength={40} />
       }
     } else if (ip === collaborated) {
       if (collaborated.length <= 4 * (1 * page - 1)) {
         op = <h4>Nothing to show here!</h4>
       } else {
-        op = (
-          <Tiles
-            data={collaborated /* .slice(4 * (1 * page - 1), 5 * page - 1) */}
-            TLength={20}
-            BLength={150}
-          />
-        )
+        op = <Tiles data={collaborated} TLength={20} BLength={150} />
       }
     }
     return op
