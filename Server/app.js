@@ -11,6 +11,7 @@ const userRouter = require('./Routes/userRoutes')
 const noteRouter = require('./Routes/noteRoutes')
 const path = require('path')
 const cors = require('cors')
+const compression = require('compression');
 
 const app = express()
 app.use(
@@ -51,6 +52,8 @@ app.use(xss())
     ],
   })
 ) */
+
+app.use(compression())
 
 // 3) ROUTES
 
