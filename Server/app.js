@@ -15,12 +15,14 @@ const compression = require('compression')
 
 const app = express()
 app.use(
-  cors({
+  cors(/* {
     origin: ['http://localhost:3000', 'http://192.168.56.1:8080'],
     credentials: true,
     allowedHeaders: ['Content-Length', 'Content-Type', 'Authorization'],
-  })
+  } */)
 )
+
+app.options('*', cors())
 
 app.use(helmet())
 
