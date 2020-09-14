@@ -4,9 +4,8 @@ const rateLimit = require('express-rate-limit')
 const helmet = require('helmet')
 const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
-// const hpp = require('hpp')
 const AppError = require('./utils/appError')
-const globalErrorHandler = require('./controller/errorController')
+const globalErrorHandler = require('./Controller/errorController')
 const userRouter = require('./Routes/userRoutes')
 const noteRouter = require('./Routes/noteRoutes')
 const path = require('path')
@@ -16,14 +15,13 @@ const compression = require('compression')
 const app = express()
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'http://192.168.56.1:8080'],
+    origin: true,
     credentials: true,
     allowedHeaders: ['Content-Length', 'Content-Type', 'Authorization'],
   })
 )
 
-// app.options('*', cors())
-
+app.options('*', cors())
 app.use(helmet())
 
 const limiter = rateLimit({
@@ -41,19 +39,6 @@ app.use(cookieParser())
 app.use(mongoSanitize())
 
 app.use(xss())
-
-/* app.use(
-  hpp({
-    whitelist: [
-      'duration',
-      'ratingsQuantity',
-      'ratingsAverage',
-      'maxGroupSize',
-      'difficulty',
-      'price',
-    ],
-  })
-) */
 
 app.use(compression())
 

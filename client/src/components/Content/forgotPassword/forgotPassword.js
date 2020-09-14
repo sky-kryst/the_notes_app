@@ -15,10 +15,9 @@ const ForgotPassword = props => {
     try {
       setFetching(true)
       const res = (
-        await Axios.post(
-          'http://192.168.56.1:5000/api/v1/user/forgotPassword',
-          { email: placeholder }
-        )
+        await Axios.post('/api/v1/user/forgotPassword', {
+          email: placeholder,
+        })
       ).data.message
       if (res) {
         props.onSetError(res)

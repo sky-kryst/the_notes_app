@@ -27,7 +27,7 @@ const Home = props => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        let url = 'http://192.168.56.1:5000/api/v1/note',
+        let url = '/api/v1/note',
           sort = ''
         if (sortBy === 'most_liked') sort = '&sort=-likesCount'
         const res = (await Axios.get(url + sort)).data.data

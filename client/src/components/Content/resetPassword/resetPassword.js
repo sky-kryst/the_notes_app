@@ -63,7 +63,7 @@ const ResetPassword = props => {
     const post = async () => {
       try {
         const res = await Axios.patch(
-          `http://192.168.56.1:5000/api/v1/user/resetPassword/${placeholder}`,
+          `/api/v1/user/resetPassword/${placeholder}`,
           { newPassword, confirmPassword }
         )
         if (res) {

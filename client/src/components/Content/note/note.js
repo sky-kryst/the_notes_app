@@ -41,6 +41,9 @@ const Note = props => {
   }
 
   const onPublishHandler = () => {
+    if (!props.isAuthenticated) {
+      throw Error('You need to login to start creating notes!')
+    }
     onLoadingStart()
     const noteData = {
       title,
@@ -95,6 +98,7 @@ const mapStateToProps = state => {
   return {
     userID: state.auth.userId,
     onLoading: state.notes.loading,
+    isAuthenticated: state.auth.token !== null,
   }
 }
 

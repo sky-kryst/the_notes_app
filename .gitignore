@@ -4,6 +4,8 @@ Server/node_modules/
 Server/*.env
 client/*.prettierrc
 Server/*.prettierrc
-client/*eslint.json
-Server/*eslint.json
+client/.eslintrc.json
+client/debug.log
+client/*README.md
+Server/.eslintrc.json
 .vscode
