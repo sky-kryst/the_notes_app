@@ -18,9 +18,10 @@ export function* checkAuthTimeoutSaga(action) {
 export function* authUserSaga(action) {
   yield put(actions.authStart())
   const authData = { ...action.user }
-  let url = '/user/login'
+  const prefix = '/api/v1/user'
+  let url = prefix + 'login'
   if (action.isSignup) {
-    url = '/user/signup'
+    url = prefix + 'signup'
   }
   try {
     const res = yield Axios.post(url, authData)
