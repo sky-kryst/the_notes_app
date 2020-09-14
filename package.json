@@ -11,7 +11,7 @@
     "client-install": "npm install --prefix client",
     "server-install": "npm install --prefix Server",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run client-install && npm run build"
+    "heroku-postbuild": "npm run server-install && npm run client-install && npm run build"
   },
   "author": "Aakash Meshram",
   "license": "ISC",

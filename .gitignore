@@ -7,6 +7,5 @@ Server/*.prettierrc
 client/.eslintrc.json
 client/debug.log
 client/README.md
-client/build
 Server/.eslintrc.json
 .vscode
