@@ -6,6 +6,6 @@ client/*.prettierrc
 Server/*.prettierrc
 client/.eslintrc.json
 client/debug.log
-client/*README.md
+client/README.md
 Server/.eslintrc.json
 .vscode
