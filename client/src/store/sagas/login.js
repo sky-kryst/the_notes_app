@@ -18,7 +18,7 @@ export function* checkAuthTimeoutSaga(action) {
 export function* authUserSaga(action) {
   yield put(actions.authStart())
   const authData = { ...action.user }
-  const prefix = '/api/v1/user'
+  const prefix = '/api/v1/user/'
   let url = prefix + 'login'
   if (action.isSignup) {
     url = prefix + 'signup'
