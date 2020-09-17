@@ -8,14 +8,11 @@ import Spinner from '../../UI/spinner/spinner'
 import css from './node.module.css'
 
 const Note = props => {
-  let tt = '',
-    bd = ''
-
   const pathname = new URL(document.location).pathname
   const noteId = pathname.split('/')[2]
   const { onLoadingStart, onLoadingEnd, onLoading } = props
-  const [body, setBody] = useState(tt)
-  const [title, setTitle] = useState(bd)
+  const [body, setBody] = useState('')
+  const [title, setTitle] = useState('')
   const [fetched, setFetched] = useState(false)
 
   useEffect(() => {
@@ -25,7 +22,7 @@ const Note = props => {
       setBody(note.data.data.body)
       setFetched(true)
     }
-    if (typeof noteId !== 'undefined') {
+    if (noteId) {
       fetch()
     } else {
       setFetched(true)
@@ -51,7 +48,7 @@ const Note = props => {
       likesCount: 0,
       creator: props.userID,
     }
-    if (typeof noteId === 'undefined') {
+    if (noteId) {
       axios.post(`user/${noteData.creator}/note`, noteData).then(res => {
         onLoadingEnd()
         props.history.replace(`/note/${res.data.data.id}`)
