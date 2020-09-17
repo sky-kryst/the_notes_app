@@ -51,7 +51,7 @@ class Tile extends Component {
         </div>
         <div className={style.buttons}>
           <div className={style.like} onClick={this.onLikehandler}>
-            <button className={style.like}>{`${this.props.likes}❤`}</button>
+            <button className={style.like}>{`${this.props.likes}🖤`}</button>
           </div>
           <div
             className={style.view}
