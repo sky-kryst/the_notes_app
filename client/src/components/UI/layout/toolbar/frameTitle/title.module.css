@@ -1,17 +1,20 @@
 .text {
   cursor: default;
-  position: absolute;
+  /* position: absolute;
   left: 43.9vw;
-  top: 3vh;
+  top: 3vh; */
+  margin: auto;
   background-color: inherit;
   border: 0px;
   font-size: larger;
   font-weight: bold;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 1440px) and (max-height: 3200px) and (orientation: portrait) {
   .text {
-    top: 1.3vh;
-    left: 32vw;
+    /* top: 1.3vh;
+    left: 31vw; */
+    font-size: large;
+    /* margin: auto 0; */
   }
 }

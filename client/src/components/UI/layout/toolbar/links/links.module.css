@@ -40,7 +40,7 @@
   right: 0.2vw;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 1440px) and (max-height: 3200px) and (orientation: portrait) {
   .link {
     display: flex;
     flex-flow: column;
