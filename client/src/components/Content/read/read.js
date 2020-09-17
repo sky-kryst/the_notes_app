@@ -55,7 +55,7 @@ const Read = props => {
 
   return (
     <div className={css.note}>
-      {props.onLoading && body.length > 0 ? <Spinner /> : op}
+      {props.onLoading && body.length < 0 ? <Spinner /> : op}
     </div>
   )
 }
