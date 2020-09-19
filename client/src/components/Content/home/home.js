@@ -25,11 +25,14 @@ const Home = props => {
   useEffect(() => wrappedSetPage('1'), [wrappedSetPage])
 
   useEffect(() => {
+    setFetched(pS => {
+      if (pS) return null
+    })
     const fetch = async () => {
       try {
         let url = '/api/v1/note',
           sort = ''
-        if (sortBy === 'most_liked') sort = '&sort=-likesCount'
+        if (sortBy === 'most_liked') sort = '?sort=-likesCount'
         const res = (await Axios.get(url + sort)).data.data
         if (res) setNotes(res)
         if (isAuthenticated) {
@@ -106,14 +109,17 @@ const Home = props => {
     )
   }
 
-  const output = e => setSortBy(e.target.value)
+  const output = e => {
+    e.persist()
+    setSortBy(e.target.value)
+  }
 
   return !err ? (
     <div className={css.Home}>
       <div className={css.Header}>
         <div>Notes</div>
         <div>
-          <select onChange={output}>
+          <select value={sortBy} onChange={output}>
             <option value="latest">Latest</option>
             <option value="most_liked">Most Liked</option>
           </select>
