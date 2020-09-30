@@ -55,8 +55,6 @@ const Note = props => {
       likesCount: 0,
       creator: userID,
     }
-    console.log('nD', noteDate)
-    console.log('nID', noteID)
     if (!noteId) {
       axios.post(`user/${noteData.creator}/note`, noteData).then(res => {
         onLoadingEnd()
