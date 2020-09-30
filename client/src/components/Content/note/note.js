@@ -10,7 +10,14 @@ import css from './node.module.css'
 const Note = props => {
   const pathname = new URL(document.location).pathname
   const noteId = pathname.split('/')[4]
-  const { onLoadingStart, onLoadingEnd, onLoading } = props
+  const {
+    onLoadingStart,
+    onLoadingEnd,
+    onLoading,
+    isAuthenticated,
+    userID,
+    history,
+  } = props
   const [body, setBody] = useState('')
   const [title, setTitle] = useState('')
   const [fetched, setFetched] = useState(false)
@@ -38,7 +45,7 @@ const Note = props => {
   }
 
   const onPublishHandler = () => {
-    if (!props.isAuthenticated) {
+    if (!isAuthenticated) {
       throw Error('You need to login to start creating notes!')
     }
     onLoadingStart()
@@ -46,19 +53,21 @@ const Note = props => {
       title,
       body,
       likesCount: 0,
-      creator: props.userID,
+      creator: userID,
     }
+    console.log('nD', noteDate)
+    console.log('nID', noteID)
     if (noteId) {
       axios.post(`user/${noteData.creator}/note`, noteData).then(res => {
         onLoadingEnd()
-        props.history.replace(`/note/${res.data.data.id}`)
+        history.replace(`/note/${res.data.data.id}`)
       })
     } else {
       axios
         .patch(`user/${noteData.creator}/note/${noteId}`, noteData)
         .then(() => {
           onLoadingEnd()
-          props.history.replace(`/note/${noteId}`)
+          history.replace(`/note/${noteId}`)
         })
     }
   }
@@ -80,7 +89,7 @@ const Note = props => {
         onChange={onBodyChange}
       ></textarea>
       <div className={css.pressable}>
-        <Button clicked={() => props.history.goBack()}>Back</Button>
+        <Button clicked={() => history.goBack()}>Back</Button>
         <Button clicked={onPublishHandler}>Post</Button>
       </div>
     </Fragment>
