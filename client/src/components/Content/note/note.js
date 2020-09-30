@@ -9,7 +9,7 @@ import css from './node.module.css'
 
 const Note = props => {
   const pathname = new URL(document.location).pathname
-  const noteId = pathname.split('/')[2]
+  const noteId = pathname.split('/')[4]
   const { onLoadingStart, onLoadingEnd, onLoading } = props
   const [body, setBody] = useState('')
   const [title, setTitle] = useState('')
