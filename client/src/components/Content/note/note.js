@@ -57,7 +57,7 @@ const Note = props => {
     }
     console.log('nD', noteDate)
     console.log('nID', noteID)
-    if (noteId) {
+    if (!noteId) {
       axios.post(`user/${noteData.creator}/note`, noteData).then(res => {
         onLoadingEnd()
         history.replace(`/note/${res.data.data.id}`)
